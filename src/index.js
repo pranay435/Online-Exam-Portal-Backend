@@ -9,7 +9,7 @@ require('./config/env');
 // Middleware setup
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://online-exam-portal-backend.onrender.com/',
+    origin: 'https://main--poetic-macaron-6768de.netlify.app/',
     methods: 'GET,POST',
     allowedHeaders: 'Content-Type,Authorization'
 }));
