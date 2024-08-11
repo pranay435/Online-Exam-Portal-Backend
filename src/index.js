@@ -8,11 +8,11 @@ require('./config/env');
 
 // Middleware setup
 app.use(bodyParser.json());
-// app.use(cors({
-//     origin: 'http://localhost:5173',
-//     methods: 'GET,POST',
-//     allowedHeaders: 'Content-Type,Authorization'
-// }));
+app.use(cors({
+    origin: 'https://online-exam-portal-backend.onrender.com/',
+    methods: 'GET,POST',
+    allowedHeaders: 'Content-Type,Authorization'
+}));
 
 // Route setup
 app.use('/auth', require('./routes/authRoutes'));
