@@ -9,10 +9,11 @@ require('./config/env');
 // Middleware setup
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://main--poetic-macaron-6768de.netlify.app/',
+    origin: 'https://main--poetic-macaron-6768de.netlify.app',
     methods: 'GET,POST',
     allowedHeaders: 'Content-Type,Authorization'
 }));
+app.options('*', cors()); // Handle preflight requests
 
 // Route setup
 app.use('/auth', require('./routes/authRoutes'));
