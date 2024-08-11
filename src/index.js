@@ -19,6 +19,7 @@ app.use('/auth', require('./routes/authRoutes'));
 app.use('/test', require('./routes/testRoutes'));
 app.get('/',(req,res)=>{
     console.log("server is running...")
+    res.send("backend is running...")
 })
 
 const PORT = 3000;
