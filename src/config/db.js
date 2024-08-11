@@ -1,11 +1,12 @@
 const mysql = require("mysql");
+require("./env")
 
 const client = mysql.createConnection({
-    host: "127.0.0.1",
-    port: "3306",
-    user: "sams3pi0l",
-    password: "3lli0t",
-    database: "online_exam_portal"
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 client.connect((err) => {
