@@ -15,6 +15,12 @@ app.use(cors({
 }));
 app.options('*', cors()); // Handle preflight requests
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // or specify allowed origins
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+  next();
+});
 // Route setup
 app.use('/auth', require('./routes/authRoutes'));
 app.use('/test', require('./routes/testRoutes'));
