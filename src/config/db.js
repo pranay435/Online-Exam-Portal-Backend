@@ -1,8 +1,10 @@
 const mysql = require('mysql');
 const fs = require('fs');
+const path = require('path');
 
 // Read the certificate file
-const serverCert = fs.readFileSync('./server-cert.pem');
+const serverCertPath = path.resolve(__dirname, 'server-cert.pem');
+const serverCert = fs.readFileSync(serverCertPath);
 
 const connection = mysql.createConnection({
     host: process.env.DB_HOST,
