@@ -18,7 +18,7 @@ router.post('/login', (req, res) => {
     client.query(query, [username], async (err, result) => {
         if (err) {
             console.error('Database query error:', err);
-            return res.status(500).send('Internal Server Error');
+            return res.status(500).send('Database Error...');
         }
 
         if (result.length === 0) {
@@ -55,7 +55,7 @@ router.post('/signup', async (req, res) => {
         client.query(query, [username, passHash, email], (err, result) => {
             if (err) {
                 console.error("Database Error:", err.message || err);
-                return res.status(500).send("Internal Server Error");
+                return res.status(500).send("Database Error");
             }
 
             return res.status(200).send("Successfully Signed Up...");
