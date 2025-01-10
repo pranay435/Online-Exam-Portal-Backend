@@ -36,12 +36,12 @@ A comprehensive web application for conducting online exams, supporting multiple
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/pranay435/online-exam-portal.git
+   git clone https://github.com/pranay435/Online-Exam-Portal-Backend.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd online-exam-portal/backdEnd
+   cd Online-Exam-Portal-Backend
    ```
 
 3. Install dependencies:
